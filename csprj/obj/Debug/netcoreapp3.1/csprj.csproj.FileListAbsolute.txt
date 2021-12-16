@@ -1,0 +1,13 @@
+D:\weiyun\csprj\csprj\csprj\bin\Debug\netcoreapp3.1\csprj.exe
+D:\weiyun\csprj\csprj\csprj\bin\Debug\netcoreapp3.1\csprj.deps.json
+D:\weiyun\csprj\csprj\csprj\bin\Debug\netcoreapp3.1\csprj.runtimeconfig.json
+D:\weiyun\csprj\csprj\csprj\bin\Debug\netcoreapp3.1\csprj.runtimeconfig.dev.json
+D:\weiyun\csprj\csprj\csprj\bin\Debug\netcoreapp3.1\csprj.dll
+D:\weiyun\csprj\csprj\csprj\bin\Debug\netcoreapp3.1\csprj.pdb
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.csprojAssemblyReference.cache
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.AssemblyInfoInputs.cache
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.AssemblyInfo.cs
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.csproj.CoreCompileInputs.cache
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.dll
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.pdb
+D:\weiyun\csprj\csprj\csprj\obj\Debug\netcoreapp3.1\csprj.genruntimeconfig.cache
