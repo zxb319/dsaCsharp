@@ -2,18 +2,26 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Claims;
 using System.Threading;
 using csprj.dsa;
 using csprj.dsa.fin;
+using Newtonsoft.Json.Linq;
 
 namespace csprj {
+
     class Program {
 
         static void Main(string[] args) {
-            var a=BitConverter.GetBytes(1).Reverse();
-            foreach(var b in a) {
-                Console.WriteLine(b);
-            }
+
+            var js = new JArray();
+            var o = new JObject();
+            o["aa"] = 1;
+
+            js.Add(o);
+
+            Console.WriteLine(js.ToString());
         }
 
         static void test1() {

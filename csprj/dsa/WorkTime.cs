@@ -36,7 +36,7 @@ namespace csprj.dsa {
             url = "http://ics.chinasoftinc.com:8010/sso/toLoginYellow";
             response = client.GetAsync(url).Result;
             result = response.Content.ReadAsStringAsync().Result;
-
+        
             var empCode = Regex.Match(response.RequestMessage.RequestUri.OriginalString, @"empCode=(.+)$").Groups[1].Value;
             url = "http://ics.chinasoftinc.com:8010/ehr_saas/web/user/loginByEmpCode.jhtml";
             json = new JObject();

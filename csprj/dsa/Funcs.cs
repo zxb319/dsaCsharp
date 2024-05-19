@@ -8,7 +8,7 @@ namespace csprj.dsa {
                 yield return (i++, e);
             }
         }
-
+        
         public static IEnumerable<(T1, T2)> Zip<T1,T2>(IEnumerable<T1> elems1, IEnumerable<T2> elems2) {
             var es1 = elems1.GetEnumerator();
             var es2 = elems2.GetEnumerator();
