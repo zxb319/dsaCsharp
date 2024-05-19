@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csprj", "csprj\csprj.csproj", "{BC335D22-981E-4274-B3E9-25CFD79EF92E}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csprj", "csprj\csprj.csproj", "{BC335D22-981E-4274-B3E9-25CFD79EF92E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +15,11 @@ Global
 		{BC335D22-981E-4274-B3E9-25CFD79EF92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC335D22-981E-4274-B3E9-25CFD79EF92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC335D22-981E-4274-B3E9-25CFD79EF92E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36AD1F79-343D-4F4B-9E33-D25637198EC3}
 	EndGlobalSection
 EndGlobal

@@ -1,30 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading;
 using csprj.dsa;
+using csprj.dsa.fin;
 
 namespace csprj {
-class Program {
-    static void Main(string[] args) {
-        SortedDictionary<string, int> d = new SortedDictionary<string, int>();
-        d.Add("r",1);
-        d.Add("d",1);
-        d.Add("b",1);
-        d.Add("c",1);
-        d.Add("a",1);
+    class Program {
 
-        foreach (var kv in d) {
-            Console.Out.WriteLine(kv.Key+"-->"+kv.Value);
+        static void Main(string[] args) {
+            var a=BitConverter.GetBytes(1).Reverse();
+            foreach(var b in a) {
+                Console.WriteLine(b);
+            }
         }
-    }
 
-    static int fib(int a, int b, int n) {
-        if (n == 1) {
-            return b;
+        static void test1() {
+            var st = DateTime.Now;
+
+
+            long a = 0;
+            for (int i = 0; i < 1e9; i++) {
+                a += i;
+            }
+            Console.WriteLine(a);
+
+            var et = DateTime.Now;
+            Console.WriteLine($"{(et - st).TotalSeconds}s");
+            Console.WriteLine("*****************");
         }
-        else {
-            return fib(b, a + b, n - 1);
+
+        static void ttt() {
+            var f = File.CreateText(@"d:\aa.txt");
+            f.WriteLine("zxb");
+            f.Close();
         }
+
     }
-}
 }

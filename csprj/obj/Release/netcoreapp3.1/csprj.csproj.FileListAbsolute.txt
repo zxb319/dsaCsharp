@@ -4,10 +4,13 @@ D:\weiyun\csprj\csprj\csprj\bin\Release\netcoreapp3.1\csprj.runtimeconfig.json
 D:\weiyun\csprj\csprj\csprj\bin\Release\netcoreapp3.1\csprj.runtimeconfig.dev.json
 D:\weiyun\csprj\csprj\csprj\bin\Release\netcoreapp3.1\csprj.dll
 D:\weiyun\csprj\csprj\csprj\bin\Release\netcoreapp3.1\csprj.pdb
-D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.csprojAssemblyReference.cache
 D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.AssemblyInfoInputs.cache
 D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.AssemblyInfo.cs
 D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.csproj.CoreCompileInputs.cache
 D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.dll
 D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.pdb
 D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.genruntimeconfig.cache
+D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.csproj.AssemblyReference.cache
+D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.GeneratedMSBuildEditorConfig.editorconfig
+D:\weiyun\csprj\csprj\csprj\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+D:\weiyun\csprj\csprj\csprj\obj\Release\netcoreapp3.1\csprj.csproj.CopyComplete

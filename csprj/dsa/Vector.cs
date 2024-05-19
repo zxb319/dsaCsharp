@@ -41,7 +41,7 @@ public class Vector<T>where T:new() {
 
         return res;
     }
-
+            
     public T Norm {
         get {
             T res = new T();

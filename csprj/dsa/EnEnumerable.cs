@@ -4,71 +4,57 @@ using System.Collections.Generic;
 
 namespace csprj.dsa {
 
-public interface EnEnumerable<T> : IEnumerable<T> {
-    public EnEnumerable<T2> Map<T2>(Func<T, T2> func) {
-        return new EnEnumerableMap<T, T2>(this, func);
-    }
-
-    public EnEnumerable<T> Filter(Func<T, bool> func) {
-        return new EnEnumerableFilter<T>(this, func);
-    }
-}
-
-public class EnEnumerableStd<T> : EnEnumerable<T> {
-    private IEnumerable<T> elems;
-    
-    public EnEnumerableStd(IEnumerable<T>elems) {
-        this.elems = elems;
-    }
-    public IEnumerator<T> GetEnumerator() {
-        foreach (var e in elems) {
-            yield return e;
+    public class EnEnumerable<T> : IEnumerable<T> {
+        private IEnumerable<T> elems;
+        public EnEnumerable(IEnumerable<T> elems) {
+            this.elems = elems;
         }
-    }
 
-    IEnumerator IEnumerable.GetEnumerator() {
-        return GetEnumerator();
-    }
-}
+        public EnEnumerable<R> Map<R>(Func<T, R> func) {
+            IEnumerable<R> f(EnEnumerable<T> elems) {
+                foreach (var e in elems) {
+                    yield return func(e);
+                }
+            }
 
-
-public class EnEnumerableMap<T,T2> : EnEnumerable<T2> {
-    private EnEnumerable<T> elems;
-    private Func<T, T2> func;
-    
-    public EnEnumerableMap(EnEnumerable<T>elems,Func<T,T2>func) {
-        this.elems = elems;
-        this.func = func;
-    }
-    public IEnumerator<T2> GetEnumerator() {
-        foreach (var e in elems) {
-            yield return func(e);
+            return new EnEnumerable<R>(f(this));
         }
-    }
 
-    IEnumerator IEnumerable.GetEnumerator() {
-        return GetEnumerator();
-    }
-    
-}
-public class EnEnumerableFilter<T> : EnEnumerable<T> {
-    private EnEnumerable<T> elems;
-    private Func<T, bool> func;
-    
-    public EnEnumerableFilter(EnEnumerable<T>elems,Func<T,bool>func) {
-        this.elems = elems;
-        this.func = func;
-    }
-    public IEnumerator<T> GetEnumerator() {
-        foreach (var e in elems) {
-            if(func(e))
+        public EnEnumerable<T> Filter(Func<T, bool> func) {
+            IEnumerable<T> f(EnEnumerable<T> elems) {
+                foreach (var e in elems) {
+                    if (func(e)) {
+                        yield return e;
+                    }
+                }
+            }
+
+            return new EnEnumerable<T>(f(this));
+        }
+
+        public R Reduce<R>(Func<R, T, R> func, R init) {
+            R res = init;
+            foreach (var e in elems) {
+                res = func(res, e);
+            }
+
+            return res;
+        }
+
+        public void Foreach(Action<T> action) {
+            foreach (var e in this.elems) {
+                action(e);
+            }
+        }
+
+        public IEnumerator<T> GetEnumerator() {
+            foreach (var e in this.elems) {
                 yield return e;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() {
+            return GetEnumerator();
         }
     }
-
-    IEnumerator IEnumerable.GetEnumerator() {
-        return GetEnumerator();
-    }
-}
-
 }
